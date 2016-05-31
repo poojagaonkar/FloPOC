@@ -65,10 +65,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\POCFlorence\POCFlorence.csproj">
       <Name>POCFlorence</Name>
+      <Project>{7A64DB98-E397-4CB4-8D1A-97D52520BE72}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +145,34 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\FlyoutNavigationController.cs" />
+    <Compile Include="Utility\ColorHelper.cs" />
+    <Compile Include="Utility\FontHelper.cs" />
+    <Compile Include="Utility\HtmlCleaner.cs" />
+    <Compile Include="Utility\HtmlHelper.cs" />
+    <Compile Include="Utility\OpenMenuGestureRecognizer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fonts\LICENSE.txt" />
+    <BundleResource Include="Resources\Fonts\OpenSans-ExtraBold.ttf" />
+    <BundleResource Include="Resources\Fonts\OpenSans-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\OpenSans-Semibold.ttf" />
+    <BundleResource Include="Resources\Fonts\PTS55F.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
+  </ItemGroup>
 </Project>
