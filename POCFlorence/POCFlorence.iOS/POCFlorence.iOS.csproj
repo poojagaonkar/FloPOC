@@ -133,6 +133,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="NavigationMenu\MenuTableCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -145,16 +146,22 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utility\FlyoutNavigationController.cs" />
     <Compile Include="Utility\ColorHelper.cs" />
     <Compile Include="Utility\FontHelper.cs" />
     <Compile Include="Utility\HtmlCleaner.cs" />
     <Compile Include="Utility\HtmlHelper.cs" />
-    <Compile Include="Utility\OpenMenuGestureRecognizer.cs" />
+    <Compile Include="NavigationMenu\FlyoutNavigationController.cs" />
+    <Compile Include="NavigationMenu\OpenMenuGestureRecognizer.cs" />
+    <Compile Include="NavigationMenu\MenuTableSource.cs" />
+    <Compile Include="NavigationMenu\MenuTableCell.cs" />
+    <Compile Include="NavigationMenu\MenuTableCell.designer.cs">
+      <DependentUpon>MenuTableCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Utility\" />
+    <Folder Include="NavigationMenu\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Fonts\LICENSE.txt" />
@@ -174,5 +181,8 @@
     <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
     <BundleResource Include="Resources\Fonts\Roboto-Thin.ttf" />
     <BundleResource Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
+    <BundleResource Include="Resources\hand.png" />
+    <BundleResource Include="Resources\name.png" />
+    <BundleResource Include="Resources\dot.png" />
   </ItemGroup>
 </Project>

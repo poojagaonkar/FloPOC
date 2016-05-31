@@ -11,11 +11,19 @@ using UIKit;
 
 namespace POCFlorence.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("MenuTableCell")]
+	partial class MenuTableCell
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel labelTitle { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (labelTitle != null) {
+				labelTitle.Dispose ();
+				labelTitle = null;
+			}
 		}
 	}
 }
