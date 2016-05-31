@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using FlyoutNavigation;
 
 namespace POCFlorence.iOS
 {
@@ -9,6 +10,7 @@ namespace POCFlorence.iOS
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
+		public static FlyoutNavigationController flyoutController;
 
 		public override UIWindow Window {
 			get;

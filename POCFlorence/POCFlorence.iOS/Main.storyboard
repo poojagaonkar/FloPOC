@@ -1,25 +1,137 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
-	<dependencies>
-		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204" />
-	</dependencies>
-	<scenes>
-		<!--View Controller-->
-		<scene sceneID="tne-QT-ifu">
-			<objects>
-				<viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-					<layoutGuides>
-						<viewControllerLayoutGuide type="top" id="y3c-jy-aDJ" />
-						<viewControllerLayoutGuide type="bottom" id="wfy-db-euE" />
-					</layoutGuides>
-					<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-						<rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-						<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
-						<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
-					</view>
-				</viewController>
-				<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder" />
-			</objects>
-		</scene>
-	</scenes>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.95686274509803926" green="0.49803921568627452" blue="0.18431372549019609" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="3" translatesAutoresizingMaskIntoConstraints="NO" image="name.png">
+                                <rect key="frame" x="136.5" y="259" width="327" height="58"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.50196078431372548" blue="0" alpha="1"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="44" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="516" y="557" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="7" firstItem="3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="8" firstItem="8bC-Xf-vdC" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" constant="12"/>
+                            <constraint id="46" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="44" secondAttribute="trailing" constant="38"/>
+                            <constraint id="47" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="44" secondAttribute="bottom" constant="13"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="44" id="name-outlet-44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <scene sceneID="17">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="min" id="18" sceneMemberID="viewController" customClass="MasterPageViewController" storyboardIdentifier="Master_VC"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="0.0"/>
+        </scene>
+        <scene sceneID="23">
+            <objects>
+                <viewController id="24" sceneMemberID="viewController" customClass="PageContentViewController" storyboardIdentifier="PageContent_VC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="21"/>
+                        <viewControllerLayoutGuide type="bottom" id="22"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="25">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="28" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="602" height="45"/>
+                                <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.6" green="0.4" blue="0.2" alpha="1"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="34" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="20" y="8" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="32" firstItem="28" firstAttribute="height" constant="45"/>
+                                    <constraint id="35" firstItem="34" firstAttribute="centerY" secondItem="28" secondAttribute="centerY"/>
+                                    <constraint id="36" firstItem="34" firstAttribute="leading" secondItem="28" secondAttribute="leading" constant="20"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="29" firstItem="28" firstAttribute="top" secondItem="25" secondAttribute="top"/>
+                            <constraint id="30" firstItem="28" firstAttribute="leading" secondItem="25" secondAttribute="leading"/>
+                            <constraint id="31" firstItem="28" firstAttribute="trailing" secondItem="25" secondAttribute="trailing" constant="2"/>
+                            <constraint id="33" firstItem="28" firstAttribute="centerX" secondItem="25" secondAttribute="centerX" constant="1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnToggle" destination="34" id="name-outlet-34"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="26" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253" y="0.0"/>
+        </scene>
+        <scene sceneID="39">
+            <objects>
+                <viewController id="40" sceneMemberID="viewController" customClass="HomeViewController" storyboardIdentifier="Home_VC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="37"/>
+                        <viewControllerLayoutGuide type="bottom" id="38"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="41">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="666"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fonts/OpenSans-ExtraBold.ttf" width="0" height="0"/>
+        <image name="Fonts/OpenSans-Regular.ttf" width="0" height="0"/>
+        <image name="Fonts/OpenSans-Semibold.ttf" width="0" height="0"/>
+        <image name="Fonts/PTS55F.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Black.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-BlackItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Bold.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-BoldItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Italic.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Light.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-LightItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Medium.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-MediumItalic.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Regular.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-Thin.ttf" width="0" height="0"/>
+        <image name="Fonts/Roboto-ThinItalic.ttf" width="0" height="0"/>
+        <image name="hand.png" width="312" height="180"/>
+        <image name="name.png" width="327" height="58"/>
+        <image name="dot.png" width="225" height="225"/>
+    </resources>
 </document>

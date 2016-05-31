@@ -11,18 +11,18 @@ using UIKit;
 
 namespace POCFlorence.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("PageContentViewController")]
+	partial class PageContentViewController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btnNext { get; set; }
+		UIButton btnToggle { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnNext != null) {
-				btnNext.Dispose ();
-				btnNext = null;
+			if (btnToggle != null) {
+				btnToggle.Dispose ();
+				btnToggle = null;
 			}
 		}
 	}

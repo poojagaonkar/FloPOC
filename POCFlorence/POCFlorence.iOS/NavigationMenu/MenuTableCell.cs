@@ -20,7 +20,7 @@ namespace POCFlorence.iOS
 		{
 		}
 
-		internal void BindData (string strLabel, string strCategoryColor)
+		internal void BindData (string strLabel)
 		{ 
 			try {
 				

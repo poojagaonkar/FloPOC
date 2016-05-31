@@ -157,6 +157,19 @@
     <Compile Include="NavigationMenu\MenuTableCell.designer.cs">
       <DependentUpon>MenuTableCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="MasterPageViewController.cs" />
+    <Compile Include="MasterPageViewController.designer.cs">
+      <DependentUpon>MasterPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageContentViewController.cs" />
+    <Compile Include="PageContentViewController.designer.cs">
+      <DependentUpon>PageContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageViewControllerSource.cs" />
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
