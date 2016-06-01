@@ -3,6 +3,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 using AttiniMobile.iOS;
+using POCFlorence.iOS.Utilities;
 
 namespace POCFlorence.iOS
 {
@@ -13,6 +14,11 @@ namespace POCFlorence.iOS
 
 		public HomeViewController (IntPtr handle) : base (handle)
 		{
+		}
+
+		public override bool PrefersStatusBarHidden ()
+		{
+			return true;
 		}
 
 		public override void ViewDidLoad ()
@@ -26,13 +32,14 @@ namespace POCFlorence.iOS
 
 			MenuTableSource dataSource = new MenuTableSource (titles);
 			dataSource.NewPageEvent += DataSource_NewPageEvent;
+			AppDelegate.flyoutController.NavigationTableView.Source = dataSource;
 
 			AppDelegate.flyoutController.ViewControllers = new UIViewController[] {
 
 				masterFlipper
 			};
 			AppDelegate.flyoutController.HideShadow = false;
-			//AppDelegate.flyoutController.NavigationTableView.BackgroundColor = UIColor.Clear.FromHexString (AppDelegate.MenuPrimaryColor);
+			AppDelegate.flyoutController.NavigationTableView.BackgroundColor = UIColor.Clear.FromHexString (AppDelegate.MenuTableColor);
 			AppDelegate.flyoutController.NavigationTableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
 			AppDelegate.flyoutController.ShouldReceiveTouch += (sender, touch) => {
 				return false;

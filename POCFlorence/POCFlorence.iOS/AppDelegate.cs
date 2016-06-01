@@ -11,6 +11,7 @@ namespace POCFlorence.iOS
 	{
 		// class-level declarations
 		public static FlyoutNavigationController flyoutController;
+		public static string MenuTableColor = "F47F2F";
 
 		public override UIWindow Window {
 			get;
