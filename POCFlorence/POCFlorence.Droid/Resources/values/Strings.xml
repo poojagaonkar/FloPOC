@@ -2,4 +2,6 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">POCFlorence.Droid</string>
+  <string name="open_drawer">POCFlorence.Droid</string>
+  <string name="close_drawer">POCFlorence.Droid</string>
 </resources>
