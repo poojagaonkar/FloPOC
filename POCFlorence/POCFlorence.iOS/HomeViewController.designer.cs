@@ -14,8 +14,16 @@ namespace POCFlorence.iOS
 	[Register ("HomeViewController")]
 	partial class HomeViewController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnToggle { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnToggle != null) {
+				btnToggle.Dispose ();
+				btnToggle = null;
+			}
 		}
 	}
 }

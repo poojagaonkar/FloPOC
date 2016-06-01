@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 using UIKit;
+using System.Linq;
 
 namespace POCFlorence.iOS
 {
@@ -15,12 +16,10 @@ namespace POCFlorence.iOS
 		{
 			base.ViewDidLoad ();
 
-			btnToggle.TouchUpInside += BtnToggle_TouchUpInside;
+			var data =  AppDelegate.ContentList.ElementAt(pageIndex);
+			labelContent.Text = data.Title;
+
 		}
 
-		void BtnToggle_TouchUpInside (object sender, EventArgs e)
-		{
-			AppDelegate.flyoutController.ToggleMenu ();
-		}
 	}
 }

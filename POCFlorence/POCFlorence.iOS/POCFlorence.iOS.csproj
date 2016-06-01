@@ -197,5 +197,7 @@
     <BundleResource Include="Resources\hand.png" />
     <BundleResource Include="Resources\name.png" />
     <BundleResource Include="Resources\dot.png" />
+    <BundleResource Include="Resources\toggle.png" />
+    <BundleResource Include="Resources\navbanner.png" />
   </ItemGroup>
 </Project>

@@ -25,6 +25,10 @@ namespace POCFlorence.iOS
 		{
 			base.ViewDidLoad ();
 
+			this.NavigationController.NavigationBarHidden = false;
+			this.NavigationController.NavigationBar.Hidden = false;
+			this.NavigationController.NavigationBar.SetBackgroundImage (UIImage.FromFile ("navbanner.png"), UIBarMetrics.Default);
+
 			masterFlipper = this.Storyboard.InstantiateViewController ("Master_VC") as MasterPageViewController;
 
 			AppDelegate.flyoutController = new FlyoutNavigation.FlyoutNavigationController ();
@@ -48,6 +52,16 @@ namespace POCFlorence.iOS
 
 
 			View.AddSubview (AppDelegate.flyoutController.View);
+
+			NavigationItem.LeftBarButtonItem = new UIBarButtonItem (UIImage.FromFile ("toggle.png"),UIBarButtonItemStyle.Plain, delegate {
+				AppDelegate.flyoutController.ToggleMenu ();
+			});
+			btnToggle.TouchUpInside += BtnToggle_TouchUpInside;
+		}
+
+		void BtnToggle_TouchUpInside (object sender, EventArgs e)
+		{
+			AppDelegate.flyoutController.ToggleMenu ();
 		}
 
 		void DataSource_NewPageEvent (object sender, EventArgs e)

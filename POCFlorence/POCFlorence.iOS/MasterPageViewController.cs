@@ -20,12 +20,12 @@ namespace POCFlorence.iOS
 		{
 			AppDelegate.flyoutController.ForceMenuOpen = false;
 
-			contentList = new List<PageContentModel> ();
-			contentList.Add (new PageContentModel { Title = "One", Body = "Something", ImageName = "hands.png" });
-			contentList.Add (new PageContentModel { Title = "two", Body = "Something", ImageName = "hands.png" });
-			contentList.Add (new PageContentModel { Title = "three", Body = "Something", ImageName = "hands.png" });
+			AppDelegate.ContentList = new List<PageContentModel> ();
+			AppDelegate.ContentList.Add (new PageContentModel { Title = "One", Body = "Something", ImageName = "hands.png" });
+			AppDelegate.ContentList.Add (new PageContentModel { Title = "two", Body = "Something", ImageName = "hands.png" });
+			AppDelegate.ContentList.Add (new PageContentModel { Title = "three", Body = "Something", ImageName = "hands.png" });
 
-			numberOfPages = contentList.Count;
+			numberOfPages = AppDelegate.ContentList.Count;
 			this.DataSource = this;
 			var startingViewController = this.ViewControllerAtIndex (0);
 			var viewControllers = new UIViewController []{ startingViewController };

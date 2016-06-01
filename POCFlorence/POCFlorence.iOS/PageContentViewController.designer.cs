@@ -16,13 +16,13 @@ namespace POCFlorence.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btnToggle { get; set; }
+		UILabel labelContent { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnToggle != null) {
-				btnToggle.Dispose ();
-				btnToggle = null;
+			if (labelContent != null) {
+				labelContent.Dispose ();
+				labelContent = null;
 			}
 		}
 	}
