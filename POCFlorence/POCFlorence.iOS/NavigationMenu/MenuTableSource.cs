@@ -27,9 +27,9 @@ namespace AttiniMobile.iOS
 		}
 		public override void RowSelected(UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
-			//AppDelegate.selectedChannelName = titles [indexPath.Row];
+			AppDelegate.selectedChannelName = titles [indexPath.Row];
 			NewPageEvent(this, new EventArgs());
-			tableView.DeselectRow (indexPath, true);
+			tableView.DeselectRow (indexPath, false);
 		}
 		public override nint RowsInSection(UITableView tableview, nint section)
 		{

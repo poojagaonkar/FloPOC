@@ -18,6 +18,8 @@ namespace POCFlorence.iOS
 
 			var data =  AppDelegate.ContentList.ElementAt(pageIndex);
 			labelContent.Text = data.Title;
+			labelBody.Text = data.Body;
+			imgBody.Image = UIImage.FromFile (data.ImageName);
 
 		}
 

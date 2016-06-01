@@ -21,9 +21,9 @@ namespace POCFlorence.iOS
 			AppDelegate.flyoutController.ForceMenuOpen = false;
 
 			AppDelegate.ContentList = new List<PageContentModel> ();
-			AppDelegate.ContentList.Add (new PageContentModel { Title = "One", Body = "Something", ImageName = "hands.png" });
-			AppDelegate.ContentList.Add (new PageContentModel { Title = "two", Body = "Something", ImageName = "hands.png" });
-			AppDelegate.ContentList.Add (new PageContentModel { Title = "three", Body = "Something", ImageName = "hands.png" });
+			AppDelegate.ContentList.Add (new PageContentModel { Title = "One", Body = "Something", ImageName = "hand.png" });
+			AppDelegate.ContentList.Add (new PageContentModel { Title = "two", Body = "Something", ImageName = "hand.png" });
+			AppDelegate.ContentList.Add (new PageContentModel { Title = "three", Body = "Something", ImageName = "hand.png" });
 
 			numberOfPages = AppDelegate.ContentList.Count;
 			this.DataSource = this;
@@ -80,11 +80,11 @@ namespace POCFlorence.iOS
 			return pageContentController;
 		}
 
-//		public void ReloadPages (UIViewController[] viewControllers, UIPageViewControllerNavigationDirection direction, bool animated, UICompletionHandler completion, List<Models.NewsModel> mviewPages, int totalPages)
-//		{
-//			viewPages = mviewPages;
-//			numberOfPages = totalPages;
-//			this.SetViewControllers (viewControllers, direction, animated, completion);
-//		}
+		public void ReloadPages (UIViewController[] viewControllers, UIPageViewControllerNavigationDirection direction, bool animated, UICompletionHandler completion, List<PageContentModel> mviewPages, int totalPages)
+		{
+			AppDelegate.ContentList = mviewPages;
+			numberOfPages = totalPages;
+			this.SetViewControllers (viewControllers, direction, animated, completion);
+		}
 	}
 }

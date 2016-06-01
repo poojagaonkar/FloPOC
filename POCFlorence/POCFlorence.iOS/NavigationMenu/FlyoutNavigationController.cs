@@ -245,7 +245,7 @@ namespace FlyoutNavigation
 
 			navigation.TableView.ScrollsToTop = false;
            
-            
+
             shadowView = new UIView();
             shadowView.BackgroundColor = UIColor.White;
 
