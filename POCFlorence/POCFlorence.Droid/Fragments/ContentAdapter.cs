@@ -9,20 +9,27 @@ namespace POCFlorence.Droid.Fragments
     public class ContentAdapter : FragmentPagerAdapter
     {
         private Android.Support.V4.App.FragmentManager ChildFragmentManager;
-        private int pageCount = 3;
+       
+        private List<PageContentModel> contentList;
+        private FragmentActivity Activity;
 
-        public ContentAdapter(Android.Support.V4.App.FragmentManager ChildFragmentManager) : base (ChildFragmentManager)
+      
+
+        public ContentAdapter(FragmentManager ChildFragmentManager, List<PageContentModel> contentList, FragmentActivity Activity)
+            : base(ChildFragmentManager)
         {
             // TODO: Complete member initialization
             this.ChildFragmentManager = ChildFragmentManager;
+            this.contentList = contentList;
+            this.Activity = Activity;
         }
         public override Fragment GetItem(int position)
         {
-            return new ChildContentFragment();
+            return new ChildContentFragment(contentList, position, Activity);
         }
         public override int Count
         {
-            get { return pageCount; }
+            get { return contentList.Count; }
         }
     }
 }

@@ -19,7 +19,14 @@ namespace POCFlorence.Droid.Fragments
     {
         public static TabLayout tabLayout;
         public static ViewPager viewPager;
-        public static int int_items = 3;
+       
+        private List<PageContentModel> contentList;
+
+        public ContentFragment(List<PageContentModel> contentList)
+        {
+            // TODO: Complete member initialization
+            this.contentList = contentList;
+        }
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -35,7 +42,7 @@ namespace POCFlorence.Droid.Fragments
           
             viewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
  
-            var contentAdapter = new ContentAdapter(ChildFragmentManager);
+            var contentAdapter = new ContentAdapter(ChildFragmentManager, contentList, Activity);
             viewPager.Adapter = contentAdapter;
 
             return view;
