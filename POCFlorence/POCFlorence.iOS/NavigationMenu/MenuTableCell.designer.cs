@@ -11,18 +11,18 @@ using UIKit;
 
 namespace POCFlorence.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("MenuTableCell")]
+	partial class MenuTableCell
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btnNext { get; set; }
+		UILabel labelTitle { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnNext != null) {
-				btnNext.Dispose ();
-				btnNext = null;
+			if (labelTitle != null) {
+				labelTitle.Dispose ();
+				labelTitle = null;
 			}
 		}
 	}

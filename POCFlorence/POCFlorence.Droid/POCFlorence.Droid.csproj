@@ -71,6 +71,7 @@
   <ItemGroup>
     <ProjectReference Include="..\POCFlorence\POCFlorence.csproj">
       <Name>POCFlorence</Name>
+      <Project>{7A64DB98-E397-4CB4-8D1A-97D52520BE72}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

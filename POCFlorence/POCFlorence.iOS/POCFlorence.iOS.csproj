@@ -65,10 +65,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\POCFlorence\POCFlorence.csproj">
       <Name>POCFlorence</Name>
+      <Project>{7A64DB98-E397-4CB4-8D1A-97D52520BE72}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +133,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="NavigationMenu\MenuTableCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -143,6 +146,58 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\ColorHelper.cs" />
+    <Compile Include="Utility\FontHelper.cs" />
+    <Compile Include="Utility\HtmlCleaner.cs" />
+    <Compile Include="Utility\HtmlHelper.cs" />
+    <Compile Include="NavigationMenu\FlyoutNavigationController.cs" />
+    <Compile Include="NavigationMenu\OpenMenuGestureRecognizer.cs" />
+    <Compile Include="NavigationMenu\MenuTableSource.cs" />
+    <Compile Include="NavigationMenu\MenuTableCell.cs" />
+    <Compile Include="NavigationMenu\MenuTableCell.designer.cs">
+      <DependentUpon>MenuTableCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPageViewController.cs" />
+    <Compile Include="MasterPageViewController.designer.cs">
+      <DependentUpon>MasterPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageContentViewController.cs" />
+    <Compile Include="PageContentViewController.designer.cs">
+      <DependentUpon>PageContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageViewControllerSource.cs" />
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Utility\" />
+    <Folder Include="NavigationMenu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fonts\LICENSE.txt" />
+    <BundleResource Include="Resources\Fonts\OpenSans-ExtraBold.ttf" />
+    <BundleResource Include="Resources\Fonts\OpenSans-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\OpenSans-Semibold.ttf" />
+    <BundleResource Include="Resources\Fonts\PTS55F.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Black.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BlackItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-MediumItalic.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-Thin.ttf" />
+    <BundleResource Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
+    <BundleResource Include="Resources\hand.png" />
+    <BundleResource Include="Resources\name.png" />
+    <BundleResource Include="Resources\dot.png" />
+    <BundleResource Include="Resources\toggle.png" />
+    <BundleResource Include="Resources\navbanner.png" />
+  </ItemGroup>
 </Project>

@@ -11,19 +11,11 @@ using UIKit;
 
 namespace POCFlorence.iOS
 {
-	[Register ("ViewController")]
-	partial class ViewController
+	[Register ("MasterPageViewController")]
+	partial class MasterPageViewController
 	{
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btnNext { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (btnNext != null) {
-				btnNext.Dispose ();
-				btnNext = null;
-			}
 		}
 	}
 }

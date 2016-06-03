@@ -1,5 +1,7 @@
 ﻿using Foundation;
 using UIKit;
+using FlyoutNavigation;
+using System.Collections.Generic;
 
 namespace POCFlorence.iOS
 {
@@ -9,6 +11,10 @@ namespace POCFlorence.iOS
 	public class AppDelegate : UIApplicationDelegate
 	{
 		// class-level declarations
+		public static FlyoutNavigationController flyoutController;
+		public static string MenuTableColor = "F47F2F";
+		public static List<PageContentModel> ContentList;
+		public static string selectedChannelName;
 
 		public override UIWindow Window {
 			get;
