@@ -10,11 +10,17 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Support.Design.Widget;
+using Android.Support.V4.View;
 
 namespace POCFlorence.Droid.Fragments
 {
     public class ContentFragment : Android.Support.V4.App.Fragment
     {
+        public static TabLayout tabLayout;
+        public static ViewPager viewPager;
+        public static int int_items = 3;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -26,6 +32,12 @@ namespace POCFlorence.Droid.Fragments
         {
             
             View view = inflater.Inflate(Resource.Layout.contentlayout, container, false);
+          
+            viewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
+ 
+            var contentAdapter = new ContentAdapter(ChildFragmentManager);
+            viewPager.Adapter = contentAdapter;
+
             return view;
         }
     }

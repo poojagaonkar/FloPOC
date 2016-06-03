@@ -74,6 +74,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fragments\ChildContentFragment.cs" />
+    <Compile Include="Fragments\ContentAdapter.cs" />
     <Compile Include="Fragments\ContentFragment.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -94,6 +96,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\contentlayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\childcontentlayout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
