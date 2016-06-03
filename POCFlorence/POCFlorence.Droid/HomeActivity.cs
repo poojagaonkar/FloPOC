@@ -72,7 +72,7 @@ namespace POCFlorence.Droid
 
             mNavigationView.NavigationItemSelected += mNavigationView_NavigationItemSelected;
 
-            GetContentList("Title1");
+            contentList = ContentList.GetContentList("Title1");
 			// Create your application here
             mFragmentManager = SupportFragmentManager;
                 mFragmentTransaction = mFragmentManager.BeginTransaction();
@@ -83,21 +83,8 @@ namespace POCFlorence.Droid
         void mNavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             mDrawerLayout.CloseDrawers();
-            switch (e.MenuItem.ItemId)
-            {
-                case Resource.Id.title1:
-                    GetContentList("Title1");
-                    break;
-                case Resource.Id.title2:
-                    GetContentList("Title2");
-                    break;
-                case Resource.Id.title3:
-                    GetContentList("Title3");
-                    break;
-                case Resource.Id.title4:
-                    GetContentList("Title4");
-                    break;
-            }
+            var menutitle = e.MenuItem.TitleFormatted.ToString();
+            contentList = ContentList.GetContentList(menutitle);
             mFragmentTransaction = mFragmentManager.BeginTransaction();
             mFragmentTransaction.Replace(Resource.Id.HomeFrameLayout, new ContentFragment(contentList));
             mFragmentTransaction.Commit();
