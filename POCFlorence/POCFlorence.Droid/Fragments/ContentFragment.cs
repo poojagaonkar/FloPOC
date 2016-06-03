@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace POCFlorence.Droid.Fragments
 {
-    public class ContentFragment : Fragment
+    public class ContentFragment : Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
