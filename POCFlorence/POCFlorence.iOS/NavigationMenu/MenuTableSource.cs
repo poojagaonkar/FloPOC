@@ -2,7 +2,7 @@
 using UIKit;
 using POCFlorence.iOS;
 
-namespace AttiniMobile.iOS
+namespace POCFlorence.iOS.NavigationMenu
 {
 	public class MenuTableSource : UITableViewSource
 	{

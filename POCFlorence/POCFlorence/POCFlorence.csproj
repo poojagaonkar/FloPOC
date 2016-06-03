@@ -34,10 +34,12 @@
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\PageContentModel.cs" />
+    <Compile Include="Data\ContentList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Utility\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>
