@@ -38,19 +38,14 @@ namespace POCFlorence.iOS.Utilities
 
 
 
-        internal static string BuildCompleteViewHtml(string bodyText, string articleTitle, string articleDate, string articleCategory, bool isOrientationHorizontal = false)
+        internal static string BuildCompleteViewHtml(string bodyText, string articleTitle, string imageName, bool isOrientationHorizontal = false)
         {
-            var dateString = "<p class='attini-top-date'>" + articleDate;
-            if (!string.IsNullOrEmpty(articleCategory))
-            {
-                dateString = dateString + " by <span class='article-top-category'>" + articleCategory + "</span>";
-            }
-            dateString = dateString + "</p>";
+            
 
-            var titleString = "<p class='attini-top-title'>" + articleTitle;
+            var titleString = "<p class='top-title'>" + articleTitle;
             titleString = titleString + "</p>";
 
-           
+            var bodyImage = "<img src='"+imageName+"'>";
 
             string boilerplateBeforeBody = @"<!DOCTYPE html>
                                             <html>
@@ -65,9 +60,7 @@ namespace POCFlorence.iOS.Utilities
                                                 </head>
                                                 <body>
                                                     <style type='text/css'>
-                                                        .attini-top-date{font-family:'Roboto-Regular'; font-size:12pt; line-height:12pt;}
-                                                        span.article-top-category{font-family:'Roboto-MediumItalic'; font-size:13pt; line-height:13pt;}
-                                                        .attini-top-title{font-family:'Roboto-Regular';font-size:18pt; line-height:18pt;}
+                                                        .top-title{font-family:'Roboto-Regular';font-size:18pt; line-height:18pt;}
                                                         html{margin:0;padding:0;}
                                                        
                                                         a{  word-wrap: break-word; }
@@ -75,7 +68,7 @@ namespace POCFlorence.iOS.Utilities
 
             string boilerplateAfterBody = "</body></html>";
 
-            return boilerplateBeforeBody + articleCategory+ titleString + dateString + "<div>" + bodyText + "</div>" + boilerplateAfterBody;
+            return boilerplateBeforeBody + titleString  + "<div>" + bodyText + "</div>"+ bodyImage +boilerplateAfterBody;
         }
     }
 }

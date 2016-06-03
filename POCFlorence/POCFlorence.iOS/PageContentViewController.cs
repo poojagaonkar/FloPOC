@@ -3,6 +3,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 using System.Linq;
+using POCFlorence.iOS.Utilities;
 
 namespace POCFlorence.iOS
 {
@@ -17,9 +18,8 @@ namespace POCFlorence.iOS
 			base.ViewDidLoad ();
 
 			var data =  AppDelegate.ContentList.ElementAt(pageIndex);
-			labelContent.Text = data.Title;
-			labelBody.Text = data.Body;
-			imgBody.Image = UIImage.FromFile (data.ImageName);
+			var bodyHtml = HtmlHelper.BuildCompleteViewHtml (data.Body,data.Title, data.ImageName);
+			wvContent.LoadHtmlString (bodyHtml, NSBundle.MainBundle.BundleUrl);
 
 		}
 

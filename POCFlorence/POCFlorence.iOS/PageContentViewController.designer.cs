@@ -16,29 +16,13 @@ namespace POCFlorence.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIImageView imgBody { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel labelBody { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel labelContent { get; set; }
+		UIWebView wvContent { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (imgBody != null) {
-				imgBody.Dispose ();
-				imgBody = null;
-			}
-			if (labelBody != null) {
-				labelBody.Dispose ();
-				labelBody = null;
-			}
-			if (labelContent != null) {
-				labelContent.Dispose ();
-				labelContent = null;
+			if (wvContent != null) {
+				wvContent.Dispose ();
+				wvContent = null;
 			}
 		}
 	}
